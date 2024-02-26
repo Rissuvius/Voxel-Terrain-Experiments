@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb6adb55hh18g"]
+
+[ext_resource type="PackedScene" path="res://Scenes/Player.tscn" id="1"]
+[ext_resource type="Script" path="res://Scenes/LiveEditing.gd" id="2"]
+
+[node name="World" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+script = ExtResource("2")
+
+[node name="Player" parent="." instance=ExtResource("1")]
+transform = Transform3D(1, 0, 0, 0, 0.997819, 0.0660127, 0, -0.0660127, 0.997819, 0, 2.371, 5.62095)

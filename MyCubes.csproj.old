@@ -1,0 +1,6 @@
+<Project Sdk="Godot.NET.Sdk/3.2.3">
+  <PropertyGroup>
+    <GodotUseNETFrameworkRefAssemblies>true</GodotUseNETFrameworkRefAssemblies>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+</Project>

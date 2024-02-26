@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct8flvngekg2a"]
+
+[ext_resource type="PackedScene" path="res://Scenes/Player.tscn" id="1"]
+[ext_resource type="Script" path="res://Scripts/ChunkManager.cs" id="1_ccbcn"]
+[ext_resource type="Script" path="res://Scripts/RotateLight.cs" id="3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_i80il"]
+
+[node name="TestWorld" type="Node3D"]
+
+[node name="World" type="MeshInstance3D" parent="."]
+script = ExtResource("1_ccbcn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.727294, 0.686326, 0, -0.686326, 0.727294, -9.28689, 15, 0.121016)
+light_color = Color(0.85098, 0.901961, 0.6, 1)
+shadow_enabled = true
+script = ExtResource("3")
+
+[node name="Player" parent="." instance=ExtResource("1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 84.502, 75.9876)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(16.745, 0, 0, 0, 16.745, 0, 0, 0, 16.745, -0.304939, 76.9945, 0.168304)
+mesh = SubResource("BoxMesh_i80il")
